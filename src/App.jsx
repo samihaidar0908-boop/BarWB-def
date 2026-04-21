@@ -2,7 +2,7 @@ import Navbar from './components/navbar'
 import Hero from './components/hero'
 import Aboutme from './components/about_me'
 import Services from './components/services'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Office from './components/office'
 import Portopolio from './components/portopolio'
 import Price from './components/price'
@@ -12,7 +12,7 @@ import FloatingCTA from './components/demand';
 function App() {
 
   return (
-    <Router>
+    <HashRouter>
       <Navbar />
       <Routes>
       <Route path="/" element={<Hero />}/>
@@ -26,7 +26,7 @@ function App() {
       </Routes>
       <FloatingCTA/>
 
-    </Router>
+    </HashRouter>
   )
 }
 
