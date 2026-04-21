@@ -1,0 +1,111 @@
+/* =======================================
+   WADAH TOMBOL MELAYANG
+   ======================================= */
+.floatingBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: #10b981; /* Ijo BarWB / Ijo WhatsApp */
+  color: white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  text-decoration: none;
+  box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.6);
+  z-index: 9999; /* Wajib gede banget biar ga ketutup elemen lain */
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Transisi mantul */
+  overflow: hidden;
+  
+  /* Panggil animasi denyut */
+  animation: pulseEffect 2s infinite;
+}
+
+/* =======================================
+   ANIMASI DENYUT (PULSE)
+   ======================================= */
+@keyframes pulseEffect {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+/* =======================================
+   ICON & TEKS
+   ======================================= */
+.iconWadah {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+.teks {
+  max-width: 0; /* Awalnya disembunyiin */
+  opacity: 0;
+  white-space: nowrap;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 1rem;
+  transition: all 0.4s ease;
+  padding-left: 0;
+}
+
+/* =======================================
+   EFEK HOVER (Tombol Memanjang)
+   ======================================= */
+.floatingBtn:hover {
+  background-color: #059669; /* Ijo lebih gelap dikit */
+  padding-right: 24px; /* Tambah ruang buat teks */
+  animation: none; /* Matiin denyut pas lagi di-hover */
+  transform: translateY(-5px); /* Ngangkat dikit */
+}
+
+.floatingBtn:hover .teks {
+  max-width: 200px; /* Lebarin buat nampilin teks */
+  opacity: 1;
+  padding-left: 10px;
+}
+
+/* =======================================
+   RESPONSIVE (Biar di HP ga kegedean)
+   ======================================= */
+@media (max-width: 768px) {
+  .floatingBtn {
+    bottom: 25px;
+    right: 25px;
+    padding: 15px;
+  }
+
+  .iconWadah {
+    width: 28px;
+    height: 28px;
+  }
+
+  
+  .floatingBtn:hover {
+    transform: translateY(-5px);
+    padding-right: 15px; /* Matiin efek memanjang di HP biar ga nabrak layar */
+  }
+  
+  .floatingBtn:hover .teks {
+    max-width: 0;
+    opacity: 0;
+    padding-left: 0;
+  }
+}
+

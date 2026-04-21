@@ -1,0 +1,221 @@
+.pageWrapper {
+  background-color: #f8fafc;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* =======================================
+   HEADER PORTFOLIO
+   ======================================= */
+.headerPorto {  
+  text-align: center;
+  padding: 100px 24px 40px 24px;
+  background-color: #0f172a;
+  color: white;
+}
+
+.container {
+  max-width: 1440px; /* Batas maksimal layar dewa */
+  margin: 0 auto;
+}
+
+.headingContent {
+  display: flex;
+  margin: 0 auto;
+  min-height: 40vh; /* Dibikin min-height biar ga kaku */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.headerPorto h1 {
+  /* 🔥 SIHIR CLAMP 1: Font otomatis (Min: 2.5rem, Ideal: 4vw, Max: 4.5rem) 🔥 */
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  margin-bottom: 20px;
+}
+
+.headerPorto p {
+  color: #94a3b8;
+  margin: 0 auto;
+  line-height: 1.6;
+  max-width: 800px; /* Biar paragraf ga kepanjangan di layar PC */
+  /* 🔥 SIHIR CLAMP 2 🔥 */
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+}
+
+/* =======================================
+   FILTER BUTTONS
+   ======================================= */
+.filterSection {
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  z-index: 50;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.btnFilter {
+  background-color: transparent;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  /* 🔥 SIHIR CLAMP 3: Tombol makin lega di layar gede 🔥 */
+  padding: clamp(8px, 1vw, 15px) clamp(20px, 2vw, 30px);
+  font-size: clamp(0.9rem, 1vw, 1.2rem);
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btnFilter:hover {
+  border-color: #10b981;
+  color: #10b981;
+}
+
+.btnFilter.aktif {
+  background-color: #10b981;
+  border-color: #10b981;
+  color: white;
+}
+
+/* =======================================
+   GRID KARYA (FLEXBOX CENTER)
+   ======================================= */
+.gridSection {
+  width: 100%;
+  max-width: 1440px; /* Batas wadah di tengah layar */
+  margin: 0 auto;
+  padding: clamp(60px, 8vw, 120px) 24px; /* Padding dinamis */
+}
+
+.karyaGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.karyaCard {
+  position: relative; 
+  /* 🔥 SIHIR CLAMP 4: Ukuran kartu menyesuaikan, dari 320px sampe 450px 🔥 */
+  width: clamp(320px, 25vw, 450px);
+  height: clamp(350px, 30vw, 450px);
+  flex: 0 0 auto;
+  border-radius: 20px;
+  overflow: hidden; 
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.karyaImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease; 
+}
+
+.karyaCard:hover .karyaImg {
+  transform: scale(1.1); 
+}
+
+/* OVERLAY GELAP */
+.karyaOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.2) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
+  padding: 30px;
+  color: white;
+  opacity: 0;
+  transform: translateY(20px); 
+  transition: all 0.4s ease;
+}
+
+.karyaCard:hover .karyaOverlay {
+  opacity: 1;
+  transform: translateY(0); 
+}
+
+.karyaKategori {
+  color: #34d399; 
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.karyaOverlay h3 {
+  font-size: clamp(1.4rem, 1.5vw, 2rem);
+  margin-bottom: 20px;
+}
+
+.btnDetail {
+  background-color: white;
+  color: #0f172a;
+  border: none;
+  padding: 10px 0;
+  border-radius: 8px;
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.btnDetail:hover {
+  background-color: #10b981;
+  color: white;
+}
+
+/* =======================================
+   CTA FOOTER
+   ======================================= */
+.ctaFooter {
+  background-color: var(--accent-color); 
+  color: white;
+  text-align: center;
+  padding: clamp(60px, 8vw, 100px) 24px;
+  margin-top: auto;
+}
+
+.ctaFooter h2 {
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  margin-bottom: 15px;
+}
+
+.ctaFooter p {
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  margin-bottom: 30px;
+}
+
+.btnMulai {
+  background-color: #0f172a;
+  color: white;
+  border: none;
+  padding: clamp(12px, 1.5vw, 20px) clamp(30px, 3vw, 50px);
+  border-radius: 30px;
+  font-size: clamp(1rem, 1.2vw, 1.3rem);
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btnMulai:hover {
+  transform: translateY(-5px); 
+}

@@ -1,0 +1,195 @@
+.OpeningPage {
+    min-height: 100vh;
+    background-image: url(../assets/open.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.openingContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.openingContainer h2 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.openContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+.logoAccent {
+    color: #0061b1;
+}
+
+.homePage {
+    background-color: var(--secondary-color);
+    margin: 80px;
+}
+
+.homeContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px;
+}
+
+.visiMision {
+    align-items: flex-start;
+    display : flex;
+    flex: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 2rem;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.misiContent {
+    align-items: stretch;
+    flex: 1;
+}
+
+.headerCard{  
+    text-align: center;
+    margin: 3rem 0;
+    max-width: 1200px;
+}
+
+.cardContainer {
+    display: flex;
+    justify-content: center;
+    gap : 3rem;
+    max-width: 2100px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    height: auto;
+}
+
+.card {
+    cursor: pointer;
+    text-align: center;
+    background-color: var(--accent-color);
+    flex: 0 1 350px;
+    border-radius: 35px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.card h4 {
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    min-height: 2.5rem;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(125, 121, 12, 0.5)
+}
+
+@media (max-width: 468px) {
+    .openContent h2 {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 2048px) {
+    .openingContainer {
+        max-width:2100px;
+    }
+
+    .homeContainer {
+        max-width: 1200px;
+    }
+
+    .openingContainer h2 {
+        font-size : 6.5rem;
+    }
+
+    .headerCard {
+        font-size: 3rem;
+    }
+
+    .misiContent h3 {
+        font-size: 2.5rem;
+    }
+
+    .misiContent p {
+        font-size: 2rem;
+    }
+
+    .card {
+        flex: 1 1 250px;
+    }
+
+    .card h4 {
+        font-size: 2.5rem;
+    }
+
+    .card p {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 7680px) {
+    .openingContainer {
+        max-width: 3884px;
+    }
+
+    .homePage {
+        height: 50vh;
+    }
+
+    .homeContainer {
+        max-width: 3884px;
+        margin: 0 auto;
+        height: 50vh;
+    }
+    .openingContainer h2 {
+        font-size: 15rem;
+    }
+
+    .visiMision {
+        max-width: 3884px;
+    }
+
+    .headerCard {
+        max-width: 3884px;
+        font-size: 9rem;
+    }
+    .misiContent h3 {
+        font-size: 7rem;
+    }
+
+    .misiContent p {
+        font-size: 5rem;
+    }
+
+    .cardContainer {
+        gap: 10rem;
+        max-width: 3884px;
+    }
+
+    .card {
+        flex: 0 1 1200px;
+    }
+
+    .card h4 {
+        font-size: 7rem;
+    }
+
+    .card p {
+        font-size: 5rem;
+    }
+}

@@ -1,0 +1,315 @@
+.heroGelap {
+  background-color: #000000;
+  color: white;
+  padding: 150px; /* Padding bawah digedein buat ruang tumpukan */
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.heroContent h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.heroContent p {
+  color: #94a3b8;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* =======================================
+   KONTEN PUTIH LENGKUNG (Efek Overlap)
+   ======================================= */
+.kontenPutihLengkung {
+  background-color: #ffffff;
+  border-radius: 20px 20px 0 0; /* Ujung atas kanan-kiri melengkung */
+  margin-top: -20px; /* RAHASIA NUMPUK: Ditarik ke atas nabrak hero gelap */
+  padding: 80px 0;
+  position: relative;
+  z-index: 10;
+}
+
+/* =======================================
+   KOTAK VIDEO / SHOWCASE
+   ======================================= */
+.videoCardUtama {
+  max-width: 900px;
+  margin: 0 auto 80px auto;
+  background-color: #1e293b;
+  border-radius: 20px;
+  overflow: hidden;
+  color: white;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  padding: 0 24px; /* Biar di layar HP ga mentok */
+}
+
+.videoPlaceholder {
+  background-color: #0f172a;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #334155;
+}
+
+.videoText {
+  padding: 40px;
+  text-align: center;
+}
+
+.videoText h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.videoText p {
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.btnOutline {
+  text-align: center;
+  transition: 0.3s ease;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btnOutline:hover {
+  background-color: white;
+  color: #0f172a;
+}
+/* =======================================
+   HORIZONTAL SCROLL (Rahasia Drag tanpa JS)
+   ======================================= */
+.sectionTitle {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #111827;
+  margin-bottom: 30px;
+}
+
+.horizontalScrollWrapper {
+  display: flex;
+  overflow-x: auto; /* Ini yang bikin bisa digeser ke samping */
+  scroll-snap-type: x mandatory; /* Bikin geserannya magnetik nempel */
+  gap: 1.5rem;
+  padding: 0 40px 40px 40px;
+  
+  /* Sembunyiin scrollbar jelek di bawah */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.horizontalScrollWrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Item Galeri Gede */
+.galeriItemBesar {
+  max-width: 50vw;
+  flex: 0 0 auto; /* Biar gambarnya ga nyusut dipaksa flex */
+  width: 100%; /* Lebar gambar di layar */
+  margin: 0 auto;
+  scroll-snap-align: center; /* Kalo di-swipe, posisinya otomatis ke tengah layar */
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.galeriItemBesar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ceritaKlienSection {
+  margin: 0 auto;
+}
+
+/* Item Card Kecil (Cerita Klien) */
+.klienCardKecil {
+  cursor: pointer;
+  text-align: center;
+  flex:0 1 auto;
+  scroll-snap-align: start;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease
+}
+
+.klienCardKecil:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+}
+
+.klienThumbnail {
+  border-radius: 5px;
+  background-color: #cbd5e1;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: auto;
+  object-fit: cover;
+}
+
+.klienInfo {
+  padding: 40px;
+}
+
+.tglText {
+  font-size: 0.8rem;
+  color: #64748b;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.klienInfo h4 {
+  font-size: 1rem;
+  color: #0f172a;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.klienInfo p {
+  font-size: 0.85rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+
+  .galeriItemBesar {
+    max-width: 85vw;
+  }
+
+  .heroContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+
+  .heroContent p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1920px) {
+
+  .heroContent h1 {
+    font-size: 5rem;
+  }
+
+  .heroContent p {
+    font-size: 3rem
+  }
+
+
+  .videoText h3 {
+    font-size: 3rem;
+  }
+
+  .videoPlaceholder {
+    height: 500px;
+  }
+
+  .videoPlaceholder iframe {
+    height: 400px;
+    width: 800px;
+  }
+
+  .videoText p {
+    font-size: 1.8rem;
+  }
+
+  .btnOutline {
+    padding: 25px;
+    font-size: 1.5rem;
+    
+  }
+
+  .klienInfo h4 {
+    font-size: 2.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 5rem;
+  }
+
+  .klienInfo p {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 7680px) {
+
+  .heroContent {
+    max-width: 3840px;
+  }
+  .heroContent h1 {
+    font-size: 10rem;
+  }
+
+  .heroContent p {
+    font-size: 5rem
+  }
+
+  .videoCardUtama {
+    max-width: 1920px;
+  }
+
+  .videoText h3 {
+    font-size: 5rem;
+  }
+
+  .videoPlaceholder {
+    height: 700px;
+  }
+
+  .videoPlaceholder iframe {
+    height: 700px;
+    width: 1500px;
+  }
+
+  .videoText p {
+    font-size: 2.5rem;
+  }
+
+  .btnOutline {
+    padding: 35px;
+    font-size: 2.5rem;
+    margin-top: 35px;
+  }
+
+  .klienInfo h4 {
+    font-size: 4rem;
+  }
+
+  .sectionTitle {
+    font-size: 7rem;
+  }
+
+  .klienInfo p {
+    font-size: 2.5rem;
+  }
+}

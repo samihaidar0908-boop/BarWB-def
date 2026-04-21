@@ -1,0 +1,354 @@
+/* =======================================
+   WADAH UTAMA
+   ======================================= */
+.pageWrapper {
+  background-color: #ffffff; /* Latar belakang bersih banget (Minimalis) */
+  font-family: sans-serif;
+  color: #0f172a;
+}
+
+/* =======================================
+   HEADER SECTION
+   ======================================= */
+.headerHarga {
+  text-align: center;
+  padding: 100px 24px 60px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.headerHarga h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.headerHarga p {
+  font-size: 1.1rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* =======================================
+   PRICING GRID
+   ======================================= */
+.pricingSection {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 24px 80px 24px;
+}
+
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+/* =======================================
+   PRICING CARD (MINIMALIS)
+   ======================================= */
+.pricingCard {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0; /* Garis tipis banget khas minimalis */
+  border-radius: 24px;
+  padding: 40px 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.pricingCard:hover {
+  transform: translateY(-8px); /* Efek ngangkat pas disorot */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+  border-color: #cbd5e1;
+}
+
+/* HIGHLIGHT PAKET POPULER */
+.cardPopuler {
+  border: 2px solid #10b981; /* Garis ijo tebal */
+  box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.1);
+  transform: scale(1.02); /* Dibikin sedikit lebih gede dari yang lain */
+}
+
+.cardPopuler:hover {
+  transform: scale(1.02) translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(16, 185, 129, 0.15);
+}
+
+.badgePopuler {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #10b981;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* =======================================
+   CARD HEADER
+   ======================================= */
+.cardHeader {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 30px;
+}
+
+.cardHeader h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.deskripsiPaket {
+  font-size: 0.9rem;
+  color: #64748b;
+  min-height: 45px; /* Biar tinggi deskripsi ga naik turun */
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.hargaText {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.sekaliBayar {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-weight: normal;
+}
+
+/* =======================================
+   CARD BODY (FITUR)
+   ======================================= */
+.cardBody {
+  flex-grow: 1; /* Biar nge-dorong tombol ke bawah */
+  margin-bottom: 30px;
+}
+
+.listFitur {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listFitur li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.iconCheck {
+  color: #10b981; /* Ijo khas BarWB */
+  font-weight: bold;
+}
+
+/* =======================================
+   CARD FOOTER (TOMBOL)
+   ======================================= */
+.cardFooter {
+  margin-top: auto;
+}
+
+.btnPilih {
+  width: 100%;
+  background-color: #f8fafc;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+  padding: 14px 0;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnPilih:hover {
+  background-color: #e2e8f0;
+}
+
+.btnPopuler {
+  background-color: #10b981;
+  color: white;
+  border: none;
+}
+
+.btnPopuler:hover {
+  background-color: #059669; /* Ijo lebih gelap pas di-hover */
+}
+
+/* =======================================
+   FAQ BOX SINGKAT
+   ======================================= */
+.faqSection {
+  padding: 0 24px 80px 24px;
+}
+
+.faqBox {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f8fafc;
+  border-radius: 24px;
+  padding: 40px;
+  text-align: center;
+}
+
+.faqBox h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.faqBox p {
+  color: #64748b;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.btnTanya {
+  background-color: #0f172a;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btnTanya:hover {
+  opacity: 0.8;
+}
+
+/* Responsif buat tablet */
+@media (max-width: 1024px) {
+  .cardPopuler {
+    transform: scale(1); /* Biar di layar sempit ga terlalu menonjol ke samping */
+  }
+  .cardPopuler:hover {
+    transform: translateY(-8px);
+  }
+}
+
+@media(min-width: 3840px) {
+  .headerHarga {
+    max-width:2100px;
+  }
+
+  .headerHarga h1 {
+    font-size: 4rem;
+  }
+
+  .headerHarga p {
+    font-size: 1.8rem;
+  }
+
+  .pricingSection {
+    max-width: 2800px;
+  }
+
+  .cardHeader h3{
+    font-size: 2.5rem;
+  }
+
+  .cardHeader p {
+    font-size: 1.5rem;
+  }
+
+  .cardHeader h2 {
+    font-size: 3.5rem;
+  }
+
+  .sekaliBayar {
+    font-size: 1.25rem;
+  }
+
+  .listFitur li{
+    font-size: 1.5rem;
+  }
+
+  .faqBox {
+    max-width: 2100px;
+  }
+
+  .faqBox h3 {
+    font-size: 3.5rem;
+  }
+
+  .faqBox p {
+    font-size: 1.5rem;
+  }
+
+  .btnTanya {
+    padding: 25px;
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 7680px) {
+  .headerHarga {
+    max-width: 3840px;
+  }
+
+  .headerHarga h1 {
+    font-size: 7rem;
+  }
+
+  .headerHarga p {
+    font-size: 3rem;
+  }
+
+  .pricingSection {
+    max-width: 3840px;
+  }
+
+  .cardHeader h3{
+    font-size: 3rem;
+  }
+
+  .cardHeader p {
+    font-size: 2.5rem;
+  }
+
+  .cardHeader h2 {
+    font-size: 6rem;
+  }
+
+  .sekaliBayar {
+    font-size: 2rem;
+  }
+
+  .listFitur li{
+    font-size: 2.5rem;
+  }
+
+  .faqBox {
+    max-width: 3840px;
+  }
+
+  .faqBox h3 {
+    font-size: 5rem;
+  }
+
+  .faqBox p {
+    font-size: 2.5rem;
+  }
+
+  .btnTanya {
+    padding: 35px;
+    font-size: 2rem;
+  }
+}

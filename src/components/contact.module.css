@@ -1,0 +1,194 @@
+/* =======================================
+   WADAH UTAMA
+   ======================================= */
+.pageWrapper {
+  background-color: #f8fafc; /* Latar abu-abu bersih */
+  font-family: sans-serif;
+  color: #0f172a;
+}
+
+/* =======================================
+   HEADER SECTION
+   ======================================= */
+.headerKontak {
+  text-align: center;
+  padding: 100px 24px 60px 24px;
+  background-color: #0f172a;
+  color: white;
+}
+
+.headerKontak h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.headerKontak p {
+  color: #94a3b8;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* =======================================
+   KONTEN SPLIT LAYOUT (GRID)
+   ======================================= */
+.kontenKontak {
+  max-width: 1200px;
+  margin: -40px auto 80px auto; /* Ditarik ke atas nabrak header dikit */
+  padding: 0 24px;
+  position: relative;
+  z-index: 10;
+}
+
+.kontakContainer {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; /* Kolom form dibikin lebih lebar dari info */
+  background-color: #ffffff;
+  border-radius: 24px;
+  overflow: hidden; /* Biar pojokannya rapi melengkung */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* =======================================
+   KOLOM KIRI (Info Kontak Gelap)
+   ======================================= */
+.infoKolom {
+  background-color: #1e293b;
+  color: white;
+  padding: 50px 40px;
+}
+
+.infoKolom h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.infoKolom p {
+  color: #cbd5e1;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.listInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.itemInfo {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.icon {
+  font-size: 1.5rem;
+  background-color: #0f172a;
+  padding: 12px;
+  border-radius: 50%;
+}
+
+.itemInfo h4 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+  color: #f8fafc;
+}
+
+.itemInfo p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+/* =======================================
+   KOLOM KANAN (Formulir Terang)
+   ======================================= */
+.formKolom {
+  padding: 50px 60px;
+  background-color: #ffffff;
+}
+
+.formElement {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.inputGrup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputGrup label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #475569;
+}
+
+/* Styling Input & Textarea */
+.inputGrup input,
+.inputGrup select,
+.inputGrup textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  font-size: 1rem;
+  background-color: #f8fafc;
+  color: #0f172a;
+  transition: all 0.3s ease;
+  font-family: inherit; /* Biar font textarea ngikutin webnya */
+}
+
+/* RAHASIA UX: Efek nyala pas diklik */
+.inputGrup input:focus,
+.inputGrup select:focus,
+.inputGrup textarea:focus {
+  outline: none;
+  border-color: #10b981; /* Ijo BarWB */
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+  background-color: #ffffff;
+}
+
+.inputGrup textarea {
+  resize: vertical; /* Cuma bisa ditarik atas bawah, ga bisa ke samping */
+}
+
+/* Tombol Submit */
+.btnKirim {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.btnKirim:hover {
+  background-color: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3);
+}
+
+/* =======================================
+   RESPONSIVE LAYOUT (Buat HP)
+   ======================================= */
+@media (max-width: 900px) {
+  .kontakContainer {
+    grid-template-columns: 1fr; /* Jadiin 1 kolom (numpuk atas bawah) */
+  }
+  
+  .formKolom {
+    padding: 40px 24px;
+  }
+  
+  .infoKolom {
+    padding: 40px 24px;
+  }
+}

@@ -1,0 +1,35 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #007bff; /* Biru profesional untuk aksi */
+  --secondary-color: #f8f9fa; /* Abu-abu muda untuk latar belakang */
+  --text-primary: #333333; /* Hitam arang untuk teks utama */
+  --text-secondary: #6c757d; /* Abu-abu untuk teks penjelasan */
+  --accent-color: #ffd700; /* Emas untuk aksen kepercayaan */
+}
+
+body {
+  background-color: var(--secondary-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

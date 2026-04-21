@@ -1,0 +1,224 @@
+/* =======================================
+   WADAH UTAMA HALAMAN
+   ======================================= */
+.pageWrapper {
+  background-color: #000000; /* Latar paling belakang item */
+  font-family: sans-serif;
+}
+
+/* =======================================
+   HERO GELAP
+   ======================================= */
+.heroGelap {
+  color: white;
+  text-align: center;
+  /* Padding bawah digedein banget biar ada ruang buat kotak video numpuk */
+  padding: 150px 24px 200px 24px; 
+}
+
+.heroText {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heroText h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.heroText p {
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+/* =======================================
+   KONTEN PUTIH (Overlap & Lengkung)
+   ======================================= */
+.kontenPutih {
+  background-color: #ffffff;
+  border-radius: 40px 40px 0 0; /* Ujung atas melengkung */
+  padding: 0 24px 80px 24px;
+  margin-top: -60px; /* Tarik ke atas dikit */
+  position: relative;
+}
+
+/* =======================================
+   KOTAK VIDEO NUMPUK
+   ======================================= */
+.videoWadah {
+  max-width: 900px;
+  margin: 0 auto;
+  /* RAHASIA NUMPUK: Geser posisinya ke atas sebesar 100px */
+  transform: translateY(-100px); 
+  background-color: #1e293b;
+  border-radius: 20px;
+  overflow: hidden;
+  color: white;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.videoPlaceholder {
+  background-color: #0f172a;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #ffffff;
+}
+
+.videoInfo {
+  padding: 40px;
+}
+
+.videoInfo h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.videoInfo p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  max-width: 800px;
+}
+
+.btnPutih {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 8px 24px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.btnPutih:hover {
+  background-color: white;
+  color: #0f172a;
+}
+
+/* =======================================
+   GALERI HORIZONTAL (Sama kek layanan)
+   ======================================= */
+.galeriSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* Ngakalin jarak karena kotak video tadi di-transform */
+  margin-top: -30px; 
+}
+
+.galeriTitle {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #111827;
+  margin-bottom: 40px;
+}
+
+.horizontalScroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 24px;
+  padding-bottom: 40px;
+  
+  /* Sembunyiin scrollbar */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.horizontalScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.fotoItem {
+  flex: 0 0 auto;
+  width: 450px; /* Gambarnya dibikin lumayan lebar */
+  height: 320px;
+  scroll-snap-align: center;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.fotoItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.fotoItem:hover img {
+  transform: scale(1.05); /* Pas kursor masuk, fotonya nge-zoom tipis */
+}
+
+/* Responsif buat layar HP */
+@media (max-width: 768px) {
+  .videoWadah {
+    transform: translateY(-50px);
+  }
+  .fotoItem {
+    width: 85%; /* Di HP lebarnya nyesuain layar */
+    height: 250px;
+  }
+
+  .videoPlaceholder {
+    height: 200px;
+  }
+
+  iframe {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 3840px) {
+  
+  .heroText {
+    max-width: 1500px;
+  }
+  .heroText h1{
+    font-size: 5rem;
+  }
+
+  .heroText p {
+    font-size: 2.5rem;
+  }
+
+  .videoWadah {
+    max-width: 1200px;
+  }
+
+  .videoPlaceholder iframe{
+    width: 1000px;
+    height: 400px;
+  }
+
+  .videoInfo h3 {
+    font-size: 3rem;
+  }
+
+  .videoInfo p {
+    font-size: 1.5rem;
+  }
+
+  .btnPutih {
+    padding: 15px;
+    font-size: 1.3rem;
+  }
+
+  .galeriTitle {
+    font-size: 3rem;
+  }
+
+  .fotoItem {
+    width: 500px;
+  }
+}
