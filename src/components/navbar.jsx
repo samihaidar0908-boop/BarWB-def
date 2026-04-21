@@ -30,7 +30,7 @@ function Navbar() {
 
       <nav>
         <ul className={`${styles.menuUtama} ${isOpen ? styles.active : ''}`}>
-          <li><Link to="/">home</Link></li>
+          <li><Link to="/" onclick={toggleMenu}>home</Link></li>
           <li className={styles.dropdownList}>
             <span onClick={toggleDropdown} className={styles.dropdownToggle}>
               about
