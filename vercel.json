@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api-proxy/:path*",
+      "destination": "https://barwb.wuaze.com/api/:path*"
+    }
+  ]
+}

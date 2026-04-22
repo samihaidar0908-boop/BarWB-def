@@ -20,7 +20,7 @@ function Contact() {
     e.preventDefault(); 
     setStatus('loading')
 
-    const apiUrl = import.meta.env.VITE_API_URL;
+    const apiUrl = "/api-proxy";
 
     // 2. KIRIM DATA KE LARAVEL PAKE AXIOS
     axios.post(`${apiUrl}/contact`, formData)
