@@ -23,7 +23,7 @@ function Contact() {
     const apiUrl = import.meta.env.VITE_API_URL;
 
     // 2. KIRIM DATA KE LARAVEL PAKE AXIOS
-    axios.post(`${apiUrl}contact`, formData)
+    axios.post(`${apiUrl}/contact`, formData)
       .then(response => {
         // Kalau sukses, munculin pesan dari Laravel
        setStatus('success')
